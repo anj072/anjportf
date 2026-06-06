@@ -1,0 +1,906 @@
+w o r k a b o u t  m e c o n t a c t
+Ima gine
+A pla ce
+Where a tlassian has taken o ver
+D i s c o r d
+Wait, What?!
+Let’s
+Projec t  Brief
+Br oadly , we had t o swap Design Systems.
+The brief was t o choose any digital pr oduct or platform and r edesign it using another design system. The mor e 
+contr asting the design system, the better .
+B ut why d o th i s?
+G ood q uestion.
+T o understand design 
+systems and how the y wer e 
+used and implemented.
+Swapping a design system with 
+another helped us understand the 
+pr oduct better and the thought 
+behind e v er y design decision
+This was a gr aded 
+pr oject
+A n d  i t’ d  b e a l i e if  we say we weren’t curious.
+Process
+How did we appr oach this not-so-conv entional r edesign pr oject?
+01 02 03
+Analysing and 
+dissecting 
+Discor d’ s design
+Understanding A tlassian ’ s 
+Design System fr om the gr ound 
+up and comparing it t o Discor d
+Studying A tlassian pr oducts t o understand 
+how the design system was used and find 
+aspects that the design system did not co v er
+And finally , after multiple iter ations and trials 04
+Redesigning Discor d as a pr oduct within A tlassian ’ s ecosystem
+Now that you’re all caught up, 
+shall we?
+Jason
+Stan
+The founders
+Discor d is an  online v oice, video, and text communication 
+platform  designed for cr eating communities.
+
+Discor d sets itself apar t b y  placing community and 
+connection at the for efr ont . Unlik e tr aditional social media 
+platforms that prioritiz e individual pr ofiles, Discor d is 
+designed ar ound the concept of ser v ers and communities
+Discor d was originally designed with a 
+focus on gamers t o solv e all their 
+communication pr oblems.
+T oda y , it is used for v arious purposes 
+r anging fr om online education t o music 
+discussions among other things.
+M issio n
+C reate space f or e v eryone 
+to fi n d  b elong i ng .
+T o help users build genuine r elationships with 
+their friends and communities close t o home or 
+ar ound the world. The v ision curr ently followed b y 
+Discor d is t o bring communities of all sect ors 
+t ogether .
+So what m a k es D i scor d  -   
+VISION  AND  P ERSON ALI T Y
+?
+An 
+incl us i v e 
+w or l d   Vision
+wh e r e n o  
+o ne f eel s  
+li k e an 
+outs i d e r
+G ame r’s  
+men t al 
+m od el
+V al ues
+P la yfu l
+p ur p os e fu l
+R ela t a b leV al ues
+or igin al
+So muchmor e  than  ‘just  another  communication  platform. ’
+W hy D i scor d ?
+Because it’ s much mor e than just another 
+communication platform. A nd that mak es it 
+fascinating t o understand and alter 
+WH A T  M AKES  I T  SO  DIFFEREN T?
+A  B ol d  I d ent i ty
+Discor d has a bold identity and br and image that it pr opagates 
+and pr omotes unli k e any other communication platform .
+F r om its mar k eting t o U I  Discor d stands out and deli v ers on 
+what it stands for .
+OTL. 1
+W ith such a bold identity it was inter esting t o ta k e a 
+loo k  at how well and in what wa ys it’ s tr anslated 
+int o their inter face and functionality and how it 
+could be changed and how the platform itself 
+would change with it
+1 OT L . A n  oppor tunity  t o  learn
+Constant  E v olution
+F r om being a place for gamers t o connect t o becoming a 
+community dri v en -  platform for businesses t o education .
+Discor d has e v ol v ed and continues t o do so e v er y da y , 
+garnering mor e audience and user gr oups with time.
+OTL. 1
+Discor d off ers a lot t o study in terms of dealing 
+with extensiv e number of f eatur es  and catering t o 
+diff er ent user gr oups  and diff er ent use cases, while 
+maintaining br and identity acr oss the platform.
+Cultur al  Phenomenon
+Discor d has seeped int o popular cultur e. I t’ s become a 
+gathering place for communities and culti v ated a space for 
+indi v iduals t o connect and shar e their passions  
+Discor d has garner ed a cult li k e following, especially 
+amongst the y outh.
+OTL. 1
+T o understand what ma k es it stand out and how it’ s 
+e x perience would change if we swapped its design 
+system and personality
+Dissecting  Discord  through  Garrett’s  5-S  Model
+W e analysed  Discor d accor ding t o each la y er in the 5 - S M odel i.e. S tr ateg y ,  S cope ,  S tr u ct u r e ,  Sk elet on ,  Su r f ace .  
+W e tried t o find the disconnects between la y ers. This model helped us understand the user e x perience Discor d 
+wanted t o deli v er t o its humongous user base. 
+S trategy
+T ar get A udience
+Discor d star ted with gamers in mind but saw a 
+mor e di v erse user base during C O V I D - 1 9 . W hile 
+the y r ebr anded as a communication platform for 
+all, the cor e design r emained gamer - centric.
+S co p e
+F unctional R e q uir ements
+Discor d off ers a di v erse set of f eatur es, including 
+some tailor ed specifically t o gamers, such as the 
+ability t o monit or data pac k et loss during v oice 
+calls.
+S tructure
+C onceptual M odel
+L anguage &  M etadata
+Discor d ' s gaming inspir ation  is appar ent in its 
+conceptual model, f eaturing hidden E aster eggs 
+that demand e x plor ation. Unconv entional err or 
+messages li k e " y our files ar e t oo power ful "  r e fl ect 
+its gaming - oriented appr oach.
+S URF A C E
+U X  W riting &  T erminology
+V isuals Butt ons
+C ontr ast I conogr aphy
+Discor d uses gaming terms l i k e ‘ ser v ers ’  &  ‘ boosts ’  
+which ma y alienate non - gamers. I t incorpor ates 
+pla y ful v isuals but lac k s te x t contr ast and spacing 
+causing v isual clutter . Discor d f eatur es icons that 
+ar en ' t intuiti v e t o r eal - world symbols ma k ing them 
+challenging t o gr asp.
+S keleton
+L a y out N a v igation Hier ar chy
+I nformation Design
+Discor d ' s la y out lac k s consistency , hier ar chy , and 
+clear prioriti z ation of elements, necessitating users t o 
+scan the entir e inter face. N a vigation can be 
+r edundant and comp l ex ,  impacting accessibility t o 
+k e y f eatur es.
+Based on the analysis, we r edesigned.
+A tlassian Corpor ation is an A ustr alian softwar e company that 
+de v elops pr oducts for collabor ation and pr oductivity within 
+or ganizations.
+A tlassian caters t o a  div erse r ange of industries , and primarily 
+oper ates in B2B space  with .
+A tlassian pr oducts help teams all o v er 
+the world t o ad v ance humanity thr ough 
+the power of softwar e.
+A tlassian solutions ar e designed for all types 
+of wor k  -  W or k  management, I T  Ser v ice 
+M anagement, Agile and De v O ps 
+Discor d ' s str ategy is all about inclusi v ity , fostering 
+a sense o f  b elonging ,  and cr eating a comfor table, 
+welcoming space for e v er y one thr ough originality , 
+r elatability , r eliability , and pla y fulness.
+E x perien c e  D esi g n
+A tlassian ' s e x perience design 
+is center ed ar ound unloc k ing 
+the full potential of e v er y team.
+Discor d f acilitates comm u nication ,  
+coor dination, and teamwor k  among 
+in d ivi d u als an d  comm u nities .
+W hy 
+A tlass i an?
+Colla b or ativ e  T ools
+A tlassian fo s t e r s  t ea mwork, 
+enhances communication, and 
+pr omotes eff ecti v e 
+co lla bor a tio n  thr ough its 
+collabor ati v e t ools.
+R e v enue  S tr eams
+A tlassian pr oducts, including 
+T r ello, follow a r e v enue model 
+similar t o Discor d, with 
+pr emium subscription plans as 
+a sour ce of income.
+E x tensiv e  D esi g n  
+S ystem
+A tlassian boasts a 
+compr e h ens iv e  des ig n  sys t e m  
+co v ering br and, foundations, 
+t o k ens, components, and 
+patterns.
+I ntegr ating A tlassian ' s design system int o Discor d 
+can embody their br and identity and enhance the 
+user e x perience with pr o v en design elements, 
+r esulting in a mor e enjo y able Discor d e x perience.
+Discor d ' s primar y sour ce of r e v enue 
+r e v ol v es ar ound N itr o, their pr emium 
+subscription plan
+Design System
+I sn’t i t j ust a style gu id e? C olours, i cons, 
+an d  co m ponents?
+W ell, no.
+A tlassian has an extensiv e design system that caters t o pr oduct design on multiple le v els - 
+defining not just the components, but the br and and the guiding principles as well
+P e r s i s t e n t  b e h a v i o u r a l  
+s i m i l a r i t y  b u t  u s a b l e  
+e n o u g h
+M a n a s v i n i  P u r o h i t
+C o n v e n t i o n a l  D e s i g n
+M a n a s v i n i  P u r o h i t
+It goes a lot 
+deeper than the surface 
+th e  e s s e n c e  o f  b r i n g i n g  
+p e o p l e  t o g e th e r  a n d  
+f a c i l i t a t i n g  t e a m w o r k  
+a l i g n s  w i th  A tl a s s i a n ' s  
+m i s s i o n  t o  e m p o w e r  
+t e a m s .
+A n j a l i  G o e l
+W e dissected and studied the A tlassian Design system t o gain a compr ehensi v e understanding of the design system, 
+with a focus on i d enti fy ing b ot h  t h e similarities an d  d istinctions w it h  D iscor d’ s d esign .
+th e  e s s e n c e  o f  b r i n g i n g  
+p e o p l e  t o g e th e r  a n d  
+f a c i l i t a t i n g  t e a m w o r k  
+a l i g n s  w i th  A tl a s s i a n ' s  
+m i s s i o n  t o  e m p o w e r  
+t e a m s .
+A n j a l i  G o e l
+Br a n d
+T o  help  unleash  the  
+potential  of  e v er y  
+team.
+A tlassian  D esi g n  S ystem
+B R A N D F O U N D A T I O N C O M P O NEN T S C O N T EN T P A T T E R N S
+Br a n d
+T o  help  unleash  the  
+potential  of  e v er y  
+team.
+Person ali t y Confiden t  but  a ccept  their 
+own fl a ws
+B o l dC l e ar  &  d ir ec t
+But humble O pt i m i st i c
+U p b eat ,  r esour c e f ul  &  f rien d ly
+p o k e f u n  a t  
+o u rse l v es
+Chan g e
+S p a r k  
+P r a c t i c a l  w i t h  a
+w i n k
+a  can  do  
+attitude
+Bu t  how  i s  t hi s  
+impl e m e n te d  in  produc ts  ?
+S T U D Y I NG  A T L A SS I A N  P R O D U C T S
+T o understand how the design system was being used t o design pr oducts and t o identify na v igation, patterns 
+information design and beha v ior be y ond the what was co v er ed in the design system we studied diff er ent A tlassian 
+pr oducts.
+Understanding Onboarding 
+Ill ustra tions  
+an d  M i c ro - ani m a tions
+Ill ustra tions
+P ainting a pictur e o f  ho w  the 
+pr o d uct w or k s f or people
+Ill ustra tions
+Dynamic illustr ations that 
+por tr a y change in r eal-time
+H o w  A tlassian uses 
+illustr ations t o p aint an 
+e x citing p ictur e of w or k  an d  
+help b uil d  trust ?
+L a y out  an d  stru c tur e
+Understanding how diff er ent components ar e 
+used t o form comple x  la y outs
+L a y out
+H o w  d i ff er ent components ar e use d  
+t o cr eate la y outs an d  patterns
+C o m p on e n t s
+C r eating an d  using hy b ri d  
+components
+U S E R  FL OW  A N D  N A V I G A T I ON
+M apping the steps users ta k e t o complete onboar ding t o 
+understand and impr o v e the user ' s journe y
+U S E R  FL OW
+G ettin g  star te d  w ith  w or k  in  
+the  on b oar d in g  itsel f
+A llo w ing users t o cr eate a 
+b oar d  or a space t o get them 
+f amiliar an d  pr o v i d e a star ting 
+point
+A cce ssi b ili t y
+A ut o- f ocusing the fi rst f orm fi el d
+N a v i g a tion
+U ser contr ol an d  v isi b ility o f  
+system status 
+I n a similar manner diff er ent pr oducts and scr eens wer e studied and 
+used in the r edesign pr ocess.
+a tlassian VS D i s c o r d
+Build with hear t &  balance O pen company , no bullshit
+P la y as a team A tlassian ’ s V alues
+Don ’t #@!%  the cust omer Be the change y ou see k
+D i scor d ’s V alues
+R e l atab l e &  origina l
+Pl a yful
+pu r p ose ful
+R e l iab l e
+A n in clu si v e w or l d ,
+wh ere no one f ee l s l i ke
+an o u tsider .
+The question is
+
+Do  these  V alues  align  with  each  other?
+A tlassian and Discor d ar e distinct companies with diff er ent missions and pr oducts, 
+but ther e ar e some shar ed v alues.
+O p en  C o mm unication  C o ll a b o r ation
+I nc l u s ion D i v e r s it y
+C o mm it m ent  t o  Q ua l it y Us e r - C ent r ic  A pp r oac h
+So m eone  gi v e  that  
+pig-cow  a  suit  and  tie
+P resenting
+Cr eate  S er v er
+W el c o m e  t o  
+D i s c o r d !
+W e  a r e  s o  g l a d  t o  h a v e  y o u  h e r e .  L e t ’ s  h e l p  y o u  fi n d  a  p l a c e  
+w h e r e  y o u  b e l o n g .
+L et ’ s  g o
+J oined G ener al chat channel
+R u d r a k sh 0 8: 30  P M
+0 1 O n b oar d in g
+OLD
+Discor d’ s onboar ding pr ocess can be a bit unconv entional,  as it immediately jumps int o ser v ers befor e e x plaining what a 
+ser v er or it’ s f eatur es ar e. This can be confusing and lea v e the users in the dar k , lac k ing the necessar y information when 
+the y need it the most.
+O n b o ar d in g S k e l e t on  Leve l
+Discor d’ s pla y ful and whimsical illustr ations comprising of a lot of mascots and char acters 
+e x ist mor e as v isually pleasing fun elements r ather than contributing t o its f eatur es or purpose
+ill ustra tions S ur f a ce  Leve l
+Cr eate  S er v er
+T er m i n o l o gy
+Ser v er , G uilds, M ods, Boosts
+C r eated on a gamer ’ s mental model Discor d ' s 
+use of gaming lingo ma y be second natur e t o 
+gamers, but can be confusing for newbies
+W el c o m e  t o  
+D i s c o r d !
+W e  a r e  s o  g l a d  t o  h a v e  y o u  h e r e .  L e t ’ s  h e l p  y o u  fi n d  a  p l a c e  
+w h e r e  y o u  b e l o n g .
+L et ’ s  g o
+J oined G ener al chat channel
+R u d r a k sh 0 8: 30  P M
+So a f ew terminologies wer e changed -  the 
+biggest one, changing ser v er t o something mor e 
+inclusi v e and r elatable.
+I magine a place...
+Y our  S er v    S pa c e
+ON B O ARDIN G
+O ne thing that stands out is that A t lass i an  n ot o nly  h el p s  u se r u nde r s t and  th e  pr o d u ct thr o u gh vi s u als  and  t e x t b u t als o h el p s  u se r s  g e t s t a r t ed  with work i n  th e  o n bo a r d i n g  itself.
+I ll u str a tio n s
+“ I llustr ations pla y a v ital r ole in simplifying comple x  ideas and should be meaningful and r elatable t o the users’ conte x t and emotional state. ”
+W e cr eated illustr ations for onboar ding t o align mor e with A tlassian ' s v alues and help cr eate a pictur e of h o w  peop l e w ou l d use discor d .
+U nleash  mor e  f un  w ith  N itr o
+Ar e y ou loo k ing t o upgr ade y our Discor d e x perience? Discor d N itr o 
+might just be what y ou need !  
+I f y ou change y our mind, y ou can opt out of P r emium at any time.
+N i t r oB A S I C
+U S  $ 2 . 9 9 /  m o n t h
+5 0  M B uploads
+C ust om emojis anywher e
+Special N itr o badge on pr ofile
+2  Super R eactions per wee k
+M ost  P opular
+N i t r o
+U S  $ 9 . 9 9 /  m o n t h
+5 00  M B uploads
+C ust om emojis anywher e
+HD v ideo str eaming
+Access t o mor e Acti v ities
+5  Super R eactions per wee k
+2  Ser v er Boosts
+S u b s c ri b e  N itr o
+S k ip
+S u b s c ri b e  B asi c
+Pr emium  S u b s c ription
+A tlassian pr oducts li k e T r ello, J ir a and C on fl uence 
+ha v e a subscription based r e v enue model and 
+showcase their subscription plans during their 
+onboar ding pr ocess. 
+The design system does not co v er these aspects of 
+design, but a similar page was made for Discor d, 
+following other pr oducts.
+02 L o g in  an d  S i g n  U p
+OL D
+I nitially , Discor d’ s sign up and login wer e v ia users’ username on Discor d and passwor d. 
+That can be r estricting as many users might not r emember one or the other . 
+S k e l e t on  Leve l
+A CC ESSI B ILI T Y
+F ollowing A tlassian ’ s accessibility prinicples, 
+we a u t ofoc u sed  th e  fi r s t fi eld  b y  de f a u l t,  
+allowing users t o tab thr ough elements in the 
+form in a logical wa y .
+ON B O ARDIN G
+The scr eens wer e r edesigned, following the pattern used in A tlassian pr oducts. 
+W e implemented A tlassian ’ s sign up and login system which allows users t o login or signup  v ia 
+multiple platforms which might be mor e fa v or able for users.
+S i g n  u p  t o  c o n t i n u e
+Placeholder
+Placeholder
+Placeholder
+Placeholder
+By signing up, I  accept the A tlassian C lo ud T e rm s  o f S e r vic e
+ and ac k nowledge the Pr iv ac y P olic y .
+Continue
+or
+Continue  w ith  G oo g le
+Continue  w ith  M i c r oso f t
+Continue  w ith  A pple
+Continue  w ith  S la c k
+Alr eady ha v e an A tlassian account? L og in
+One account for Discor d. T r ello, Jir a, Confluence and mor e
+This page is pr otected b y r e C A P T C H A and the G oogle Pr iv ac y 
+P olicy and T erms of Ser vice apply .
+0 3
+0 3
+S er v er
+S er v er
+Discor d ' s na v igation can be r edundant and comple x , off ering multiple access paths t o the same f eatur e, cluttering the inter face. F r e q uently used f eatur es ma y not be easily accessible, 
+and the e x tensi v e f eatur e set can be o v er whelming, aff ecting user wa yfinding and location r ecall within the app.
+N a v i g a tion  .  S k e l e t on  l eve l
+OLD Discor d ' s inter face lac k s clear diff er entiation in si z e and hier ar chy , 
+causing v isual imbalance. The inclusion of bright colors, especially in 
+usernames, doesn ' t r ectify this.  Unclear d i ff er ences b et w een primar y ,  
+secon d ar y ,  an d  ter tiar y  elements  contribute t o the confusion. L ow 
+contr ast in typeface si z e and color hinders content distinction on the 
+scr een.
+H e irar c h y  .  S k e l e t on  l eve l
+Discor d ' s primar y la y out lac k s a defined v isual hier ar chy , ma k ing it 
+challenging for users t o na v igate seamlessly . The misconception that 
+all elements should be e q ually attention - gr abbing contributes t o a 
+clutter ed inter face and communication noise.
+L a y out  .  S k e l e t on  l eve l
+Discor d ' s pla y ful and gamer - oriented cop y , f eaturing terms li k e " guilds, "  " mods, "  and " boosts, "  ma y confuse non - gamers. I con u sage on t h e plat f orm lac k s r eal - w orl d  f amiliarit y ,  
+which can be challenging t o understand. Discor d r elies hea v ily on icons as butt ons, leading t o unclear calls - t o - action on the home page.
+S tru c tur e  l eve l
+Discerning between the ser v ers or identifying the selected one can be 
+challenging due t o the pr esence of ser v er pictur es.
+C ON TR A S T  .  S U R F A CE  l eve l
+A tlassian ' s design system typically emphasi z es 
+on simplicity , clarity , and consistency and is 
+k nown for its or gani z ed and balanced la y outs.
+W e r econsider ed the na v igation structur e since 
+A tlassian often uses a t op - le v el  hori z o n t al  
+na vig a tio n  b a r with c lea r c a t e gori es .  W e 
+adjusted Discor d ' s sidebar t o align with that.
+Discor d ' s bold and pla y ful fonts wer e r eplaced with 
+cleaner and mor e pr of essional fonts t o match 
+A tlassian ' s style. H ea d ings an d  s u bh ea d ings w er e 
+giv en pr oper emp h asis on t h e b asis o f  h ier ar c h y .  
+S ch  o
+D ir e c t  M essa g eS pa c es
+H ist or y  -  1 0 1
+Study G r oup 
+Text  ROOM S
+G ener al
+Homewor k  Help
+Session P lanning
+O ff -  t opic
+V o i ce  R oo ms
+L ounge  
+Study R oom 1
+Study R oom 2
+Community
+G ener al
+U p d ates J oin  a  S pa c e S ear ch
+ocao
+9+
+I nvite
+W el c ome  t o  y our  spa c e
+Y ou ’ r e  no w  in  “ H ist or y  -  1 0 1 ”
+S tar t  the  c onv ersation N o  than k s
+G ettin g  S tar te d
+T o get star ted, chec k  out our compr ehensi v e 
+beginners guide t o Discor d.
+N o  than k sG ettin g  S tar te d  G ui d e ·
+el S e
+Discor d Q uic k star t
+G et  t o  k no w  D is c or d
+P ersonali z e  y our  spa c e
+I nvite  y our  f rien d s
+Bring the people y ou hang out with, so 
+e v er y one can find a place t o belong.
+A dd  f rien d s
+A dd  y our  f a v ourite  apps
+T r y N itr o F r ee
+G et  star te d  f aster
+S k ip the guesswor k  with Q uic k star t, y our shor tcut t o 
+understanding Discor d.
+H ist or y  -  1 0 1 Q ui c k star t
+This is the star t of the gener al te x t r oom. 
+M essage in G ener al
+Dismiss Q uic k star t
+M embers
+S ear ch
+O n l in e  -  7
+N eha K .
+R udr a k sh
+F r ed J en
+J enna
+V aruna
+N i k ita 
+Alice M ar y
+O ffl in e  -  10
+M eha k
+Shi v ani M ehr a
+Br y an
+A tul K .
+Brianna
+R ohan 
+M ar y J ones
+Alice M ar y
+S ch  o
+D ir e c t  M essa g eS pa c es
+M uses  o f  the  past
+M usic community for 202 4
+E v ents 2
+f i r st  o n es
+Ar tists 22
+9 0 ’ s J a zz 1 0
+Text  roo ms
+G ener al
+R ecommendation 33
+V o i ce  roo ms
+J am Session
+Bellas
+C on v o and r ecs
+O nly Ar tists
+C oo l  p e o pl e  o n l y
+9 0 ’ s J a zz 2
+The Blues 4
+P op - r oc k 4
+Rec or d in g  st ud i o
+12 - 7
+23 - 7
+G ener al  
+G ener al  
+Community
+JP
+U p d ates J oin  a  S pa c e
+G ener al S ear ch
+Amar Sundar am
+J enna 0 9 : 4 2  A M
+I  still dont k now which ones which Anni k a R angar ajan
+B MO 10 : 22  A Mb o t
+M olly C lar k
+Listen t o music with style!
+P la ying in -       A ut ocode-Radio :
+Ripe - Goon Squad (Liv e fr om Studio 1)
+2 6  J uly 2023
+R u d r a k sh 0 8: 30  P M
+J oined G ener al chat r oom
+R u d r a k sh 0 8: 4 2  P M
+He yyy e v er y one !!  🖐
+R u d r a k sh He yy e v er y one !!  🖐
+N eha  K . 0 9 : 12  P M
+Hi R udr a k sh ☺️
+N i k ita 0 9 : 30  P M
+Did y ou guys find the new r elease?
+T oda y
+V aruna 0 9 : 4 2  A M
+Did y ou ta k e a loo k  at this??
+Discor d ' s br anding is pr ominent, we 
+t oned it down t o align with A tlassian ' s 
+mor e subtle appr oach t o br anding.
+L VL  3 23  Boosts
+M essage in G ener alJ enna 0 9 : 4 2  A M
+R u d r a k sh 0 9 : 4 2  A M
+😀😀🥸
+I  still dont k now which ones which
+N i k ita 0 9 : 30  P M
+I  li k e t o mo v e it, mo v e it !
+V aruna 0 9 : 4 2  A M
+He y guys !  C hec k  this out..
+N otifications and f eedbac k  wer e 
+pr esented in a mor e subdued 
+and integr ated appr oach.
+Discor d ' s ser v er members list is t oo fl ashy , 
+we r efined them t o be clear and concise, 
+adhering t o A tlassian ' s design principles
+S ear ch
+ocao
+3+
+9+
+I nvite
+el S e
+0 4 D ir e c t  M essa g es
+OLD
+F rie n d s
+Discor d clubs actions li k e message and call friends 
+under a mor e section. T o impr o v e accessibility and 
+ma k e per forming these actions easily we ha v e 
+pr esented them as separ ate butt ons.
+D irec t  M ess a g es c h a t  scree n
+W e ' v e integr ated a sear ch bo x  int o the dir ect 
+message scr een, simplifying the pr ocess of finding 
+personal D M  con v ersations.
+e x isti n g  A t l a ssi a n  scree n s
+0 5 Pr o fi le
+Discor d ' s local na v igation system, which is especially noticeable in settings and o v erla ys, can ma k e it less con v enient for users t o access v arious f eatur es. I t often 
+r e q uir es users t o bac k tr ac k  t o the main home page, r esulting in a two - step na v igation pr ocess. I n addition, Discor d only shows ser v er names when a ser v er is selected, 
+without pr o v iding an o v er v iew of all ser v er names. This ma k es it har der for users t o access information, as the y must r emember which ser v ers ha v e designated names.
+S k e l e t on  Leve l
+OLD
+U ser Profi l e M e n u
+T o maintain consistency with 
+A tlassian ' s pr oducts, a dr opdown 
+menu has been added t o the 
+pr ofile icon in Discor d, off ering 
+essential f eatur es within the 
+dr opdown itself as par t of the 
+r edesign.
+A cco u n t  se t ti n g s
+D isco r d h as  du al  p r o fi le  ta b s  w it h  si m ila r actions  wh ic h  can  b e  con fu sin g  an d r e du n d ant .  I n our Discor d r edesign, inspir ed b y 
+A tlassian ' s pr actical appr oach, we ' v e unified account - r elated actions within an Account T ab, in line with A tlassian ' s lin k ed 
+accounts philosophy . W e ' v e also intr oduced illustr ations t o add a t ouch of light-hear tedness t o serious moments,  aligning with 
+A tlassian ' s pr actical y et pla y ful appr oach.
+Discor d only displa ys ser v er names when a ser v er is 
+selected, ma k ing it challenging for users t o access 
+information without an o v er v iew . O ur r edesign, 
+inspir ed b y A tlassian ' s openness, aims t o enhance 
+the v isibility and accessibility of ser v er pr ofiles, 
+ensuring all pr ofiles ar e easily accessible t o users.
+S pa c e  Pr o fi les
+e x isti n g  A t l a ssi a n  scree n s
+0 6 Community
+Discor d superimposes the sear ch bo x  on an illustr ation t o achie v e a thr ee - dimensional eff ect and infuse a distincti v e element int o the design. This 
+appr oach cr eates a sense of depth and intrigue, gi v ing the impr ession that the design e x tends be y ond the scr een.
+S k e l e t on  Leve l
+OLD
+Discor d ' s appear ance v aries b et w een scr eens , with purple used for 
+na v igation in the community scr een and gr e y in the home scr een.
+In t e rn al  c onsist e n cy  .  sur f a ce  l eve l
+Discor d showcases a limited number of 
+communities on the community page, 
+with additional categor y communities 
+hidden until y ou clic k  on their r especti v e 
+tab.  I n contr ast, A tlassian ' s design 
+prioriti z es openness and maintains 
+v isibility both on the main scr een and 
+side na v igation. I n k eeping with this 
+philosophy of easy information access, 
+our design dir ectly pr esents v arious 
+categories on the main scr een for 
+impr o v ed v isibility . F ur thermor e, we ' v e 
+r eplaced Discor d ' s component car ds with 
+A tlassian ' s design.
+M i d j ourne y
+The o ffi cial ser v er for M idjourne y , a te x t 
+t o image A I  wher e y our imagination is 
+the only limit.
+1 7 , 000  O nline 8 13 , 121  M embers
+0 7 J oinin g  a  V oi c e  Call
+W hile swapping design systems, it was crucial t o balance the need for alignment with A tlassian ' s design system while still pr eser v ing the essential functionality 
+and user e x perience that users e x pect fr om Discor d.
+OLD
+S pa c es D ir e c t  M essa g e Community U p d ates J oin  a  S pa c e
+S ch  o
+M use  o f  ar tists
+M usic community for 202 4
+G ener al
+L VL  3 23  Boosts
+W el c ome  t o  ar tists
+E v ents 2
+This is the beginning of this space.
+f i r st  o n es
+Ar tists
+9 0 ’ s J a zz
+22
+1 0
+J ohn  S mith
+He y e v er y one !  J ust disco v er ed this ama z ing indie band, and I  can ' t st op listening t o their latest 
+album. 😍  Any indie music enthusiasts her e?
+a u t h or
+L i k e
+M ar 1 4 , 2022   1 8: 30 E dited • R estricted t o Admins only
+Text  R oo ms
+G ener al
+R ecommendation 33
+! b ela
+O h, nice find !  I ' v e been int o indie for y ears. W hat ' s the band and album? Alwa ys on the loo k out 
+for fr esh tunes.
+M ar 1 4 , 2022   1 8: 30
+L i k e
+V o i ce  R oo ms
+ashle y M ar 1 6 , 2022   1 8: 30
+J am Session I ndie fan her e t oo !  Shar e the details ;  I ' m r eady t o add some new tr ac k s t o my pla ylist.
+Bellas
+L i k e
+C on v o and r ecs eshna M ar 1 6 , 2022   1 8: 30
+O nly Ar tists
+I t ' s "L ost in E choes "  b y R adiant Hori z on. Their sound is a mi x  of dr eam pop and indie r oc k . 
+C an ' t get enough !
+C oo l  p e o pl e  o n l y L i k e
+9 0 ’ s J a zz 2 palash   M ar 16 , 2022   18:30   E dited
+The Blues 4
+Ah, R adiant Hori z on is fantastic !  The wa y the y blend those dr eamy melodies with indie r oc k  v ibes is pur e magic. Been on 
+r epeat for wee k s. The whole album is a journe y . Any other r ecent indie gems y ou all ar e obsessed with? I ' v e been hoo k ed on 
+" Silent N ights "  b y L una P ar k . I t ' s got this nostalgic y et fr esh f eel. Highly r ecommend.
+T r y N itr o F r ee L i k e
+V oi c e  C onne c te d
+Bellas /  M uses of ar tists
+A n j ali
+L una P ar k  is on another le v el !  The wa y the y captur e emotions in their lyrics is just something else.
+0 9 : 4 2  A M
+L i k e
+P alash 0 8: 30  P M
+ T otally agr ee !  L ately , I ' v e been v ibing with "E lectric Dr eams "  b y N eon S k ylines.
+M anasvini 0 9 : 30  P M
+Adding it t o my q ueue now !  This is why I  lo v e this community . Alwa ys disco v ering hidden musical tr easur es.  
+Any other suggestions, fol k s?
+L i k e
+H ar v ansh 0 9 : 4 2  A M
+N eon S k ylines has such a uni q ue sound. "E lectric Dr eams "  is li k e a soundtr ac k  t o a cyberpun k  ad v entur e. 
+L o v ing it !
+S pa c es D ir e c t  M essa g e Community U p d ates J oin  a  S pa c e
+S ch  o
+M use  o f  ar tists
+M usic community for 202 4 B ellas
+M essage in G ener alR eply · E d it · L i k e
+R eply · E d it ·
+R eply · E d it ·
+R eply · E d it ·
+R eply · E d it ·
+R eply · E d it ·
+R eply · E d it ·
+R eply · E d it ·
+M ar 1 4 , 2022
+Sear ch
+Sear ch
+Amar Sundar am
+Anni k a R angar ajan
+M olly C lar k
++ 3
+9+
+I nvite
+ocao
+W e r eplaced the Discor d - ian style using A tlassian 
+components t o ma k e the U I  loo k  mor e clean, 
+pr of essional and hier ar chal. 
+el S e
+Sear ch 9+
+ocao el S e
+L VL  3 23  Boosts
+W e adjusted colors t o align with A tlassian ' s 
+mor e subdued color palette for a 
+consistent loo k . 
+L i k e
+eshna M ar 1 6 , 2022   1 8: 30
+L i k e
+P r of essional displa y images wer e used 
+instead of personal a v atars and o ffi cial 
+names instead of cust omi z ed usernames.
+R eply · E d it ·
+Ama z ing choices, both of y ou !  M y pla ylist is getting a serious upgr ade t oda y . C an ' t wait t o e x plor e 
+these tr ac k s. K eep the r ecommendations coming !
+f i r st  o n es
+R eply · E d it ·
+E v ents 2
+Ar tists 22
+9 0 ’ s J a zz 1 0
+Text  R oo ms
+G ener al
+R ecommendation 33
+V o i ce  roo ms
+J am Session
+Bellas
+C on v o and r ecs
+O nly Ar tists
+C oo l  p e o pl e  o n l y
+9 0 ’ s J a zz 2
+The Blues 4
+@ har e s h @ p a l a s h @ a nj a li
+B ellas
+palash, har esh and anjali ar e curr ently in v oice
+Join V oi ce
+T r y N itr o F r ee
+S ch  o
+D ir e c t  M essa g eS pa c es
+M use  o f  ar tists
+M usic community for 202 4
+Community U p d ates
+B ellas
+J oin  a  S pa c e
+L VL  3 23  Boosts
+E v ents 2
+f i r st  o n es
+Ar tists 22
+9 0 ’ s J a zz 1 0
+Text  R oo ms
+G ener al
+R ecommendation 33
+V o i ce  R oo ms
+J am Session
+Bellas
+C on v o and r ecs
+O nly Ar tists
+C oo l  p e o pl e  o n l y
+9 0 ’ s J a zz 2
+The Blues 4
+T r y N itr o F r ee
+V oi c e  C onne c te d
+Bellas /  M uses of ar tists
+@ m a n a svini
+@ har e s h
+@ har v a ns h
+@ a nj a li
+@ p a l a s h
+@ s a n vik
+Sear ch 9+
+S pea k  N o w-  T S
+W el c ome  t o  B ellas
+This is the star t of the Bellas channel.
+A n j ali 0 9 : 4 2  A M
+I  still dont k now which ones which
+P alash 0 8: 30  P M
+I ’ ll clarify in a moment.
+M anasvini 0 9 : 30  P M
+Did y ou guys find the new r elease?
+H ar v ansh 0 9 : 4 2  A M
+Did y ou ta k e a loo k  at this??
+ocao
+W e ensur ed that the o v er all br and v oice, 
+including messaging and t one in the v oice 
+channels scenario, r e fl ects the 
+communication style of A tlassian.
+el S e
+M e ss a g e
+C a m e r a A c t i v i t y S c r e e n U n m u t e C a l l  V i e w D i s c o n n e c t
+L a y out of the v oice channel scr een was changed t o 
+adher e t o A tlassian ' s design principles, ensuring a 
+mor e standar di z ed and connected structur e. W e also 
+adjusted the positioning of primar y butt ons for 
+impr o v ed v isual balance.
+A tlassian has a specific inter action ( ho v er eff ects 
+and tr ansitions )  and design patterns for elements 
+li k e butt ons -  icons with suppor ting te x ts, pr oper 
+color denotation in butt ons for diff er ent states 
+( A tlassian ' s primar y and secondar y color choices )
+S pa c es D ir e c t  M essa g e Community U p d ates J oin  a  S pa c e
+S ch  o
+M use  o f  ar tists
+M usic community for 202 4 B ellas
+L VL  3 23  Boosts
+E v ents 2
+f i r st  o n es
+Ar tists 22
+9 0 ’ s J a zz 1 0
+Text  R oo ms
+G ener al
+R ecommendation 33
+V o i ce  R oo ms
+J am Session
+Bellas
+C on v o and r ecs
+O nly Ar tists
+C oo l  p e o pl e  o n l y
+9 0 ’ s J a zz 2
+The Blues 4
+T r y N itr o F r ee
+V oi c e  C onne c te d
+Bellas /  M uses of ar tists
+@ p a l a s h
+@ har e s h @ a nj a li
+@ har v a ns h @ s a n vik
+@ m a n a svini
+Sear ch 9+
+I nvite
+ocao el S e
+C a m e r a A c t i v i t y S c r e e n U n m u t e C a l l  V i e w D i s c o n n e c t
+So  w hat’s  changed ?
+0 1Buildin g  t ru st  in  e v e r y  in te r a c t ion
+F ollowing A tlassian ’ s design philosophy we r edesigned Discor d’ s inter face t o be mor e con v entional and r eliable, beha v ing in a wa y mor e 
+pr edictable for users old and new . F r om a  g l ob al  na vig a tio n  and  i n t e r a ctiv e  o n bo a r d i n g fl ow  t o a clear and dir ect cop y , and icons that ar e 
+easy t o understand, we focused on cr eating an inter face saf e t o e x plor e and disco v er . 
+I nclu s i v e  a nd  R e li ab l e
+W or k  D ri v en 02
+C r eating management and collabor ation t ools, A tlassian ’ s design system has gr eat emphasis on the wor k  done. Star ting with illustr ations 
+in onboar ding that por tr a y the work d o ne  t o add i n g Q u ick s t a r t optio n,  t o pr o v iding mor e pr ominent C T A ’ s on e v er y scr een, we r edesigned 
+Discor d t o focus mor e on the functionality it pr o v ides, designing the inter face t o pr omote action and complete tas k s.
+03L ay ou t  a nd  I n f orm a t ion  H e ir a rch y
+Discor d puts a lot of emphasis on it’ s pla y fulness -  using illustr ations, bright colours -  just tr ying t o ma k e the whole inter face loo k  bright, 
+cheer ful cr owded and full. A tlassian on the other hand embr aces the inher ent messiness in teams and helps them r ecogni z e their true 
+potential. This meant gi v ing discor d a mor e consistent loo k  with good spacing, following a pr oper hier ar chy ,  high l ighti n g th e  i n form a tio n  
+that needs t o be highlighted and adding f ew fun elements t o add a bit of win k  t o the pr acticality . 
+F in .

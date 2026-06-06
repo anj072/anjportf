@@ -1,0 +1,1548 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Onboarding</title>
+    <style>
+      :root {
+        --space-8: 8px;
+        --space-16: 16px;
+        --space-24: 24px;
+        --space-32: 32px;
+        --space-40: 40px;
+        --space-48: 48px;
+        --radius-md: 16px;
+        --radius-sm: 10px;
+        --surface-elevated: #fff9e9;
+        --surface-soft: #ffef6a;
+        --text-primary: #101010;
+        --text-muted: #2a2a2a;
+        --border-input: #101010;
+        --button-primary: #ff2d2d;
+        --button-primary-text: #ffffff;
+        --error: #9f0013;
+        --success: #0d5bff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        font-family: "Comic Neue", "Arial Black", "Trebuchet MS", sans-serif;
+        color: var(--text-primary);
+        background:
+          radial-gradient(circle at 25% 22%, rgba(255, 237, 91, 0.95) 0 120px, transparent 122px),
+          radial-gradient(circle at 85% 88%, rgba(32, 121, 255, 0.85) 0 190px, transparent 192px),
+          linear-gradient(135deg, #ffd400 0%, #ffd400 35%, #ff4d4d 35%, #ff4d4d 70%, #2f7cff 70%, #2f7cff 100%);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .page {
+        position: relative;
+        min-height: 100dvh;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        column-gap: 24px;
+        align-items: center;
+        padding-inline: 80px;
+        overflow-x: clip;
+        overflow-y: visible;
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, rgba(0, 0, 0, 0.18) 1.8px, transparent 2px);
+        background-size: 14px 14px;
+        opacity: 0.45;
+      }
+
+      .card {
+        position: relative;
+        grid-column: 4 / span 6;
+        width: 100%;
+        max-width: 760px;
+        justify-self: center;
+        padding: var(--space-40);
+        border-radius: 24px;
+        background: var(--surface-elevated);
+        border: 4px solid #101010;
+        box-shadow: 12px 12px 0 #101010;
+        overflow: visible;
+      }
+
+      .card.hidden {
+        display: none;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          -45deg,
+          rgba(255, 0, 0, 0.04) 0 10px,
+          rgba(255, 0, 0, 0.04) 10px 20px,
+          rgba(13, 91, 255, 0.05) 20px 30px,
+          rgba(13, 91, 255, 0.05) 30px 40px
+        );
+      }
+
+      .top {
+        display: grid;
+        gap: var(--space-24);
+        margin-bottom: var(--space-24);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-8);
+        width: fit-content;
+        padding: var(--space-8) var(--space-16);
+        border-radius: 999px;
+        background: var(--surface-soft);
+        border: 3px solid #101010;
+        font: 700 13px/16px "Comic Neue", "Arial Black", sans-serif;
+        color: var(--text-muted);
+        text-transform: uppercase;
+      }
+
+      .bar-wrap {
+        display: grid;
+        gap: var(--space-8);
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        font: 700 13px/16px "Comic Neue", "Arial Black", sans-serif;
+        color: var(--text-muted);
+        text-transform: uppercase;
+      }
+
+      .bar {
+        height: 8px;
+        width: 100%;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 3px solid #101010;
+        overflow: hidden;
+      }
+
+      .bar > span {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #ff2d2d 0%, #ffcf1f 50%, #0d5bff 100%);
+        transition: width 220ms ease-out;
+      }
+
+      #step-goal h1,
+      #step-level h1 {
+        color: #101010;
+      }
+
+      .step {
+        display: none;
+        animation: rise 260ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .step.active {
+        display: grid;
+        gap: var(--space-32);
+      }
+
+      h1 {
+        margin: 0;
+        width: fit-content;
+        max-width: 100%;
+        padding: 12px 18px;
+        border: 4px solid #101010;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 6px 6px 0 #101010;
+        font: 800 clamp(22px, 6vw, 34px)/1.15 "Comic Neue", "Arial Black", sans-serif;
+        letter-spacing: 0.01em;
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        bottom: -18px;
+        width: 18px;
+        height: 18px;
+        background: #ffffff;
+        border-right: 4px solid #101010;
+        border-bottom: 4px solid #101010;
+        transform: rotate(45deg);
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--text-muted);
+        font: 600 16px/28px "Comic Neue", "Trebuchet MS", sans-serif;
+      }
+
+      .section {
+        display: grid;
+        gap: var(--space-24);
+      }
+
+      .field {
+        display: grid;
+        gap: var(--space-8);
+      }
+
+      label,
+      .label {
+        font: 800 14px/16px "Comic Neue", "Arial Black", sans-serif;
+        text-transform: uppercase;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--border-input);
+        border-radius: var(--radius-md);
+        padding-inline: var(--space-16);
+        font: 700 15px/22px "Comic Neue", "Trebuchet MS", sans-serif;
+        color: var(--text-primary);
+        background: #ffffff;
+        transition: border-color 150ms ease-out, box-shadow 150ms ease-out;
+        border: 3px solid #101010;
+      }
+
+      input,
+      select {
+        height: 56px;
+      }
+
+      textarea {
+        min-height: 104px;
+        padding-block: 12px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #0d5bff;
+        box-shadow: 0 0 0 4px rgba(13, 91, 255, 0.3);
+      }
+
+      .invalid {
+        border-color: var(--error);
+      }
+
+      .error {
+        display: none;
+        margin: 0;
+        color: var(--error);
+        font: 700 14px/20px "Comic Neue", sans-serif;
+      }
+
+      .error.show {
+        display: block;
+      }
+
+      .choices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-24);
+      }
+
+      .choice {
+        border: 3px solid #101010;
+        border-radius: var(--radius-sm);
+        padding: var(--space-16);
+        background: #ffffff;
+        cursor: pointer;
+        transition: border-color 150ms ease-out, transform 150ms ease-out, box-shadow 150ms ease-out;
+        text-align: left;
+        box-shadow: 5px 5px 0 #101010;
+      }
+
+      .choice:hover {
+        transform: translateY(-1px);
+      }
+
+      .choice.selected {
+        border-color: #ff2d2d;
+        box-shadow: 7px 7px 0 #101010;
+        background: linear-gradient(180deg, #ffffff 0%, #fff1f1 100%);
+      }
+
+      .choice-title {
+        font: 800 16px/22px "Comic Neue", "Arial Black", sans-serif;
+      }
+
+      #step-goal .choice-title,
+      #step-level .choice-title {
+        color: #101010;
+      }
+
+      .choice-copy {
+        margin-top: var(--space-8);
+        color: var(--text-muted);
+        font: 600 13px/19px "Comic Neue", sans-serif;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-24);
+      }
+
+      .switch-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-16);
+        border-radius: var(--radius-sm);
+        border: 3px solid #101010;
+        background: #ffffff;
+      }
+
+      .switch {
+        appearance: none;
+        width: 52px;
+        height: 32px;
+        border-radius: 999px;
+        background: #d6d6d6;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        transition: background 150ms ease-out;
+      }
+
+      .switch::before {
+        content: "";
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        transition: transform 150ms ease-out;
+      }
+
+      .switch:checked {
+        background: var(--button-primary);
+      }
+
+      .switch:checked::before {
+        transform: translateX(20px);
+      }
+
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-24);
+        margin-top: var(--space-8);
+      }
+
+      .btn,
+      .btn-secondary {
+        height: 56px;
+        border-radius: var(--radius-md);
+        font: 800 17px/24px "Comic Neue", "Arial Black", sans-serif;
+        transition: all 150ms ease-out;
+        cursor: pointer;
+        border: 3px solid #101010;
+        box-shadow: 5px 5px 0 #101010;
+      }
+
+      .btn {
+        flex: 1;
+        background: var(--button-primary);
+        color: var(--button-primary-text);
+      }
+
+      .btn:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: 6px 6px 0 #101010;
+      }
+
+      .btn:disabled {
+        opacity: 0.72;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        min-width: 124px;
+        background: #ffffff;
+        color: var(--text-primary);
+      }
+
+      .btn-secondary:hover {
+        background: #fff4bc;
+      }
+
+      .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: var(--space-8);
+        animation: spin 800ms linear infinite;
+      }
+
+      .summary {
+        display: grid;
+        gap: var(--space-16);
+      }
+
+      .summary-item {
+        border-radius: var(--radius-sm);
+        border: 3px solid #101010;
+        background: #ffffff;
+        padding: var(--space-24);
+        box-shadow: 5px 5px 0 #101010;
+      }
+
+      .summary-label {
+        color: var(--text-muted);
+        font: 800 12px/16px "Comic Neue", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .summary-value {
+        margin-top: var(--space-8);
+        font: 800 18px/30px "Comic Neue", sans-serif;
+      }
+
+      .home-shell {
+        display: none;
+        grid-column: 2 / span 10;
+        max-width: 1120px;
+        width: 100%;
+        justify-self: center;
+        align-self: start;
+        margin-block: var(--space-40);
+        gap: var(--space-24);
+      }
+
+      .home-shell.active {
+        display: grid;
+      }
+
+      .home-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--space-16);
+      }
+
+      .home-kicker {
+        margin: 0;
+        font: 800 14px/18px "Comic Neue", sans-serif;
+        text-transform: uppercase;
+      }
+
+      .streak-pill {
+        background: #ffffff;
+        border: 3px solid #101010;
+        border-radius: 999px;
+        padding: 10px 16px;
+        box-shadow: 4px 4px 0 #101010;
+        font: 800 14px/18px "Comic Neue", sans-serif;
+        white-space: nowrap;
+      }
+
+      .home-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: var(--space-24);
+      }
+
+      .panel {
+        border: 3px solid #101010;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 6px 6px 0 #101010;
+        padding: var(--space-24);
+        position: relative;
+      }
+
+      .panel h2 {
+        margin: 0 0 8px 0;
+        font: 800 22px/28px "Comic Neue", "Arial Black", sans-serif;
+      }
+
+      .panel-copy {
+        margin: 0;
+        font: 700 14px/20px "Comic Neue", sans-serif;
+        color: var(--text-muted);
+      }
+
+      .stats-panel {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-16);
+      }
+
+      .stat-chip {
+        border: 3px solid #101010;
+        border-radius: 12px;
+        background: #fff7d2;
+        box-shadow: 4px 4px 0 #101010;
+        padding: var(--space-16);
+      }
+
+      .stat-chip:nth-child(2) {
+        background: #ffe1e1;
+      }
+
+      .stat-chip:nth-child(3) {
+        background: #dceaff;
+      }
+
+      .stat-chip:nth-child(4) {
+        background: #ffe8cb;
+      }
+
+      .stat-label {
+        font: 800 12px/16px "Comic Neue", sans-serif;
+        text-transform: uppercase;
+      }
+
+      .stat-value {
+        margin-top: 6px;
+        font: 900 24px/28px "Comic Neue", "Arial Black", sans-serif;
+      }
+
+      .today-panel {
+        grid-column: span 7;
+      }
+
+      .progress-panel {
+        grid-column: span 5;
+      }
+
+      .two-col {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-24);
+      }
+
+      .list {
+        margin: 16px 0 0 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 8px;
+        font: 700 15px/22px "Comic Neue", sans-serif;
+      }
+
+      .actions-row {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-16);
+      }
+
+      .success-badge {
+        width: 72px;
+        height: 72px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font: 900 30px/1 "Comic Neue", "Arial Black", sans-serif;
+        color: var(--success);
+        background: #ffffff;
+        border: 3px solid #101010;
+        box-shadow: 5px 5px 0 #101010;
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      .choice:focus-visible,
+      .switch:focus-visible {
+        outline: 3px solid #0d5bff;
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 1200px) {
+        .page {
+          padding-inline: 48px;
+        }
+
+        .card {
+          grid-column: 3 / span 8;
+        }
+
+        .home-shell {
+          grid-column: 1 / span 12;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .page {
+          padding-inline: 24px;
+          align-items: start;
+          padding-block: 24px;
+        }
+
+        .card {
+          grid-column: 1 / span 12;
+          padding: var(--space-24);
+        }
+
+        .stats-panel {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .today-panel,
+        .progress-panel {
+          grid-column: span 12;
+        }
+
+        .two-col,
+        .actions-row {
+          grid-template-columns: 1fr;
+        }
+
+        .home-top {
+          flex-direction: column;
+        }
+
+        .home-grid {
+          gap: var(--space-16);
+        }
+
+        .panel h2 {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 12px;
+          column-gap: 12px;
+        }
+
+        .card {
+          padding: 18px;
+          border-width: 3px;
+          box-shadow: 8px 8px 0 #101010;
+          border-radius: 20px;
+        }
+
+        .top {
+          gap: 18px;
+          margin-bottom: 18px;
+        }
+
+        .brand {
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        .meta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        h1 {
+          padding: 10px 14px;
+          box-shadow: 5px 5px 0 #101010;
+        }
+
+        h1::after {
+          left: 20px;
+          bottom: -16px;
+        }
+
+        .subtitle {
+          font-size: 15px;
+          line-height: 24px;
+        }
+
+        .choices,
+        .split,
+        .actions,
+        .two-col,
+        .actions-row,
+        .stats-panel {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .actions {
+          gap: 12px;
+        }
+
+        .btn,
+        .btn-secondary {
+          width: 100%;
+          height: 52px;
+          box-shadow: 4px 4px 0 #101010;
+        }
+
+        .btn-secondary {
+          min-width: 0;
+        }
+
+        .choice,
+        .summary-item,
+        .switch-row,
+        .panel {
+          box-shadow: 4px 4px 0 #101010;
+        }
+
+        .choice {
+          padding: 14px;
+        }
+
+        .choice-title {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        .choice-copy {
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        .switch-row {
+          gap: 12px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .summary-item {
+          padding: 18px;
+        }
+
+        .home-top {
+          flex-direction: column;
+        }
+
+        .home-grid {
+          gap: 18px;
+        }
+
+        .stats-panel {
+          gap: 12px;
+        }
+
+        .stat-value {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .page {
+          padding: 10px;
+          column-gap: 10px;
+        }
+
+        .card {
+          padding: 14px;
+          border-radius: 16px;
+          box-shadow: 6px 6px 0 #101010;
+        }
+
+        .top {
+          gap: 14px;
+          margin-bottom: 14px;
+        }
+
+        .brand {
+          padding: 6px 12px;
+          font-size: 11px;
+          line-height: 13px;
+        }
+
+        .meta {
+          font-size: 12px;
+          line-height: 14px;
+          gap: 8px;
+        }
+
+        .step.active {
+          gap: 20px;
+        }
+
+        h1 {
+          padding: 8px 12px;
+          border-width: 3px;
+          box-shadow: 4px 4px 0 #101010;
+        }
+
+        h1::after {
+          left: 16px;
+          bottom: -12px;
+          width: 14px;
+          height: 14px;
+          border-right-width: 3px;
+          border-bottom-width: 3px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+          line-height: 21px;
+        }
+
+        label,
+        .label {
+          font-size: 13px;
+          line-height: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+          font-size: 14px;
+        }
+
+        input,
+        select,
+        .btn,
+        .btn-secondary {
+          height: 50px;
+        }
+
+        .choices {
+          gap: 14px;
+        }
+
+        .choice {
+          padding: 12px;
+        }
+
+        .choice-title {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        .choice-copy {
+          margin-top: 6px;
+          font-size: 11px;
+          line-height: 16px;
+        }
+
+        .summary {
+          gap: 12px;
+        }
+
+        .summary-item {
+          padding: 14px;
+        }
+
+        .summary-value {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .success-badge {
+          width: 60px;
+          height: 60px;
+          font-size: 24px;
+          box-shadow: 4px 4px 0 #101010;
+        }
+
+        .home-kicker,
+        .streak-pill {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        .streak-pill {
+          padding: 8px 12px;
+        }
+
+        .panel {
+          padding: 16px;
+          box-shadow: 4px 4px 0 #101010;
+        }
+
+        .panel h2 {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        .list {
+          margin-top: 12px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .stat-chip {
+          padding: 12px;
+        }
+
+        .stat-value {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section id="onboarding-card" class="card" aria-label="Login and onboarding">
+        <p id="screen-announcer" class="sr-only" aria-live="polite"></p>
+        <div class="top">
+          <div class="brand">MoveDaily Plan</div>
+          <div class="bar-wrap">
+            <div class="meta">
+              <span id="step-label">Step 1 of 7</span>
+              <span id="step-title-short">Account</span>
+            </div>
+            <div class="bar" role="progressbar" aria-label="Onboarding progress" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1">
+              <span id="progress-fill"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="step-email" class="step active" data-step="1">
+          <header class="section">
+            <h1>Welcome back</h1>
+            <p class="subtitle">Sign in first, then answer a few quick questions so your plan feels made for you.</p>
+          </header>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" aria-describedby="email-error" />
+            <p id="email-error" class="error" role="alert"></p>
+          </div>
+          <div class="actions">
+            <span></span>
+            <button id="next-email" class="btn" type="button">Continue</button>
+          </div>
+        </div>
+
+        <div id="step-password" class="step" data-step="2">
+          <header class="section">
+            <h1 id="greeting">Hi there</h1>
+            <p class="subtitle">Enter your password to secure your account.</p>
+          </header>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password" aria-describedby="password-error" />
+            <p id="password-error" class="error" role="alert"></p>
+          </div>
+          <div class="actions">
+            <button id="back-password" class="btn-secondary" type="button">Back</button>
+            <button id="next-password" class="btn" type="button" aria-busy="false">Sign in</button>
+          </div>
+        </div>
+
+        <div id="step-goal" class="step" data-step="3">
+          <header class="section">
+            <h1>What is your main goal?</h1>
+            <p class="subtitle">Most fitness apps ask this first to personalize intensity and weekly targets.</p>
+          </header>
+          <div class="choices" id="goal-choices" role="radiogroup" aria-label="Select your main goal">
+            <button class="choice" type="button" data-value="Lose fat" role="radio" aria-checked="false">
+              <div class="choice-title">Lose fat</div>
+              <div class="choice-copy">Focus on calorie burn and consistency.</div>
+            </button>
+            <button class="choice" type="button" data-value="Build muscle" role="radio" aria-checked="false">
+              <div class="choice-title">Build muscle</div>
+              <div class="choice-copy">Progressive strength with recovery balance.</div>
+            </button>
+            <button class="choice" type="button" data-value="Improve endurance" role="radio" aria-checked="false">
+              <div class="choice-title">Improve endurance</div>
+              <div class="choice-copy">Cardio and stamina progression.</div>
+            </button>
+            <button class="choice" type="button" data-value="Stay active" role="radio" aria-checked="false">
+              <div class="choice-title">Stay active</div>
+              <div class="choice-copy">Simple, sustainable daily movement.</div>
+            </button>
+          </div>
+          <p id="goal-error" class="error" role="alert"></p>
+          <div class="actions">
+            <button id="back-goal" class="btn-secondary" type="button">Back</button>
+            <button id="next-goal" class="btn" type="button">Continue</button>
+          </div>
+        </div>
+
+        <div id="step-level" class="step" data-step="4">
+          <header class="section">
+            <h1>How active are you today?</h1>
+            <p class="subtitle">This helps set your day one difficulty.</p>
+          </header>
+          <div class="choices" id="level-choices" role="radiogroup" aria-label="Select your activity level">
+            <button class="choice" type="button" data-value="Beginner" role="radio" aria-checked="false">
+              <div class="choice-title">Beginner</div>
+              <div class="choice-copy">Just starting or returning after a break.</div>
+            </button>
+            <button class="choice" type="button" data-value="Intermediate" role="radio" aria-checked="false">
+              <div class="choice-title">Intermediate</div>
+              <div class="choice-copy">Work out a few times each week.</div>
+            </button>
+            <button class="choice" type="button" data-value="Advanced" role="radio" aria-checked="false">
+              <div class="choice-title">Advanced</div>
+              <div class="choice-copy">Train frequently and can handle high intensity.</div>
+            </button>
+            <button class="choice" type="button" data-value="Athlete" role="radio" aria-checked="false">
+              <div class="choice-title">Athlete</div>
+              <div class="choice-copy">Structured training and performance goals.</div>
+            </button>
+          </div>
+          <p id="level-error" class="error" role="alert"></p>
+          <div class="actions">
+            <button id="back-level" class="btn-secondary" type="button">Back</button>
+            <button id="next-level" class="btn" type="button">Continue</button>
+          </div>
+        </div>
+
+        <div id="step-schedule" class="step" data-step="5">
+          <header class="section">
+            <h1>Set your weekly rhythm</h1>
+            <p class="subtitle">A realistic schedule improves adherence and streaks.</p>
+          </header>
+          <div class="split">
+            <div class="field">
+              <label for="days">Workouts per week</label>
+              <select id="days" aria-describedby="schedule-error">
+                <option value="">Select</option>
+                <option>2 days</option>
+                <option>3 days</option>
+                <option>4 days</option>
+                <option>5 days</option>
+                <option>6 days</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="time">Preferred workout time</label>
+              <select id="time" aria-describedby="schedule-error">
+                <option value="">Select</option>
+                <option>Early morning</option>
+                <option>Late morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+          <p id="schedule-error" class="error" role="alert"></p>
+          <div class="actions">
+            <button id="back-schedule" class="btn-secondary" type="button">Back</button>
+            <button id="next-schedule" class="btn" type="button">Continue</button>
+          </div>
+        </div>
+
+        <div id="step-health" class="step" data-step="6">
+          <header class="section">
+            <h1>Any limitations to consider?</h1>
+            <p class="subtitle">Tell us so we can avoid risky movements and send useful reminders.</p>
+          </header>
+          <div class="field">
+            <label for="limitations">Injuries or limitations (optional)</label>
+            <textarea id="limitations" placeholder="Example: Knee discomfort, avoid jumping"></textarea>
+          </div>
+          <div class="switch-row">
+            <div>
+              <div class="label">Daily reminder notifications</div>
+              <p class="subtitle">Keep your streak active with gentle reminders.</p>
+            </div>
+            <input id="notifications" class="switch" type="checkbox" checked aria-label="Daily reminder notifications" />
+          </div>
+          <div class="actions">
+            <button id="back-health" class="btn-secondary" type="button">Back</button>
+            <button id="next-health" class="btn" type="button">Review plan</button>
+          </div>
+        </div>
+
+        <div id="step-summary" class="step" data-step="7">
+          <header class="section">
+            <div class="success-badge" aria-hidden="true">✓</div>
+            <h1>Your starter plan is ready</h1>
+            <p class="subtitle">Review your setup below. You can adjust any preference later in Settings.</p>
+          </header>
+          <div class="summary">
+            <div class="summary-item">
+              <div class="summary-label">Goal</div>
+              <div id="summary-goal" class="summary-value"></div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">Activity level</div>
+              <div id="summary-level" class="summary-value"></div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">Schedule</div>
+              <div id="summary-schedule" class="summary-value"></div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">Reminders</div>
+              <div id="summary-reminders" class="summary-value"></div>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="back-summary" class="btn-secondary" type="button">Back</button>
+            <button id="finish" class="btn" type="button">Start day 1</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="home-screen" class="card home-shell" aria-label="Fitness home dashboard" hidden>
+        <header class="home-top">
+          <div>
+            <p class="home-kicker">Welcome to Day 1</p>
+            <h1 id="home-greeting">Let us train</h1>
+          </div>
+          <div id="home-streak" class="streak-pill">Streak: 1 day</div>
+        </header>
+
+        <div class="stats-panel">
+          <div class="stat-chip">
+            <div class="stat-label">Workouts this week</div>
+            <div id="stat-workouts" class="stat-value">1 / 4</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-label">Calories burned</div>
+            <div id="stat-calories" class="stat-value">320</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-label">Active minutes</div>
+            <div id="stat-minutes" class="stat-value">42</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-label">Water intake</div>
+            <div id="stat-water" class="stat-value">5 / 8</div>
+          </div>
+        </div>
+
+        <div class="home-grid">
+          <article class="panel today-panel" aria-label="Today workout">
+            <h2>Today workout: Power start</h2>
+            <p class="panel-copy" id="home-goal-copy">Tailored for your goal.</p>
+            <ol class="list">
+              <li>Warm-up: 5 min dynamic mobility</li>
+              <li>Main set: 3 rounds of bodyweight circuit</li>
+              <li>Finisher: 8 min interval burn</li>
+              <li>Cooldown: 5 min stretch</li>
+            </ol>
+            <div class="actions-row">
+              <button class="btn" type="button">Start workout</button>
+              <button class="btn-secondary" type="button">Swap routine</button>
+            </div>
+          </article>
+
+          <aside class="panel progress-panel" aria-label="Challenge progress">
+            <h2>Challenge progress</h2>
+            <p class="panel-copy" id="home-progress-copy">Day 1 of 30 complete this to keep your streak alive.</p>
+            <ul class="list">
+              <li>Weekly target: <strong id="home-weekly-target">4 workouts</strong></li>
+              <li>Preferred time: <strong id="home-time-target">Evening</strong></li>
+              <li>Reminders: <strong id="home-reminder-target">On</strong></li>
+            </ul>
+            <button class="btn" style="margin-top: 20px" type="button">View full plan</button>
+          </aside>
+
+          <div class="two-col">
+            <article class="panel" aria-label="Recovery and wellness">
+              <h2>Recovery tracker</h2>
+              <p class="panel-copy">Common in fitness apps: track sleep and recovery to avoid burnout.</p>
+              <ul class="list">
+                <li>Sleep goal: 8h | Last night: 7h 20m</li>
+                <li>Recovery score: 78%</li>
+                <li>Mobility session due today</li>
+              </ul>
+            </article>
+
+            <article class="panel" aria-label="Upcoming schedule">
+              <h2>Upcoming</h2>
+              <p class="panel-copy">Stay ahead with your next planned sessions.</p>
+              <ul class="list">
+                <li>Tomorrow: Lower body strength</li>
+                <li>Wednesday: Core + conditioning</li>
+                <li>Friday: HIIT + full stretch</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const state = {
+        step: 1,
+        email: "",
+        password: "",
+        goal: "",
+        level: "",
+        days: "",
+        time: "",
+        limitations: "",
+        notifications: true,
+      };
+
+      const steps = [
+        { id: "step-email", short: "Account" },
+        { id: "step-password", short: "Security" },
+        { id: "step-goal", short: "Goal" },
+        { id: "step-level", short: "Level" },
+        { id: "step-schedule", short: "Schedule" },
+        { id: "step-health", short: "Safety" },
+        { id: "step-summary", short: "Review" },
+      ];
+
+      const stepLabel = document.getElementById("step-label");
+      const stepShort = document.getElementById("step-title-short");
+      const progressFill = document.getElementById("progress-fill");
+      const progressBar = document.querySelector(".bar");
+      const screenAnnouncer = document.getElementById("screen-announcer");
+      const onboardingCard = document.getElementById("onboarding-card");
+      const homeScreen = document.getElementById("home-screen");
+
+      const homeGreeting = document.getElementById("home-greeting");
+      const homeStreak = document.getElementById("home-streak");
+      const homeGoalCopy = document.getElementById("home-goal-copy");
+      const homeProgressCopy = document.getElementById("home-progress-copy");
+      const homeWeeklyTarget = document.getElementById("home-weekly-target");
+      const homeTimeTarget = document.getElementById("home-time-target");
+      const homeReminderTarget = document.getElementById("home-reminder-target");
+
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const daysInput = document.getElementById("days");
+      const timeInput = document.getElementById("time");
+      const limitationsInput = document.getElementById("limitations");
+      const notificationsInput = document.getElementById("notifications");
+
+      const emailError = document.getElementById("email-error");
+      const passwordError = document.getElementById("password-error");
+      const goalError = document.getElementById("goal-error");
+      const levelError = document.getElementById("level-error");
+      const scheduleError = document.getElementById("schedule-error");
+
+      const greeting = document.getElementById("greeting");
+
+      function emailIsValid(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+
+      function prettifyName(email) {
+        const user = (email.split("@")[0] || "").replace(/[._-]+/g, " ").trim();
+        if (!user) {
+          return "Welcome back";
+        }
+        const pretty = user
+          .split(" ")
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+          .join(" ");
+        return pretty ? "Hi " + pretty : "Welcome back";
+      }
+
+      function setError(input, box, message) {
+        input.classList.toggle("invalid", Boolean(message));
+        input.setAttribute("aria-invalid", message ? "true" : "false");
+        box.textContent = message || "";
+        box.classList.toggle("show", Boolean(message));
+      }
+
+      function setTextError(box, message) {
+        box.textContent = message || "";
+        box.classList.toggle("show", Boolean(message));
+      }
+
+      function setChoice(containerId, value, options = {}) {
+        const { focusSelected = false } = options;
+        state[containerId === "goal-choices" ? "goal" : "level"] = value;
+        document.querySelectorAll(`#${containerId} .choice`).forEach((node) => {
+          const selected = node.dataset.value === value;
+          node.classList.toggle("selected", selected);
+          node.setAttribute("aria-checked", selected ? "true" : "false");
+          node.setAttribute("tabindex", selected ? "0" : "-1");
+          if (selected && focusSelected) {
+            node.focus();
+          }
+        });
+      }
+
+      function moveChoice(containerId, currentButton, direction, errorBox) {
+        const options = [...document.querySelectorAll(`#${containerId} .choice`)];
+        const currentIndex = options.indexOf(currentButton);
+        if (currentIndex < 0 || options.length === 0) {
+          return;
+        }
+
+        let targetIndex = currentIndex;
+        if (direction === "next") {
+          targetIndex = (currentIndex + 1) % options.length;
+        } else if (direction === "prev") {
+          targetIndex = (currentIndex - 1 + options.length) % options.length;
+        } else if (direction === "start") {
+          targetIndex = 0;
+        } else if (direction === "end") {
+          targetIndex = options.length - 1;
+        }
+
+        const target = options[targetIndex];
+        if (!target) {
+          return;
+        }
+        setChoice(containerId, target.dataset.value || "", { focusSelected: true });
+        setTextError(errorBox, "");
+      }
+
+      function initChoiceGroup(containerId, errorBox) {
+        const options = [...document.querySelectorAll(`#${containerId} .choice`)];
+        options.forEach((button, index) => {
+          button.setAttribute("tabindex", index === 0 ? "0" : "-1");
+
+          button.addEventListener("click", () => {
+            setChoice(containerId, button.dataset.value || "");
+            setTextError(errorBox, "");
+          });
+
+          button.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+              event.preventDefault();
+              moveChoice(containerId, button, "next", errorBox);
+              return;
+            }
+            if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+              event.preventDefault();
+              moveChoice(containerId, button, "prev", errorBox);
+              return;
+            }
+            if (event.key === "Home") {
+              event.preventDefault();
+              moveChoice(containerId, button, "start", errorBox);
+              return;
+            }
+            if (event.key === "End") {
+              event.preventDefault();
+              moveChoice(containerId, button, "end", errorBox);
+              return;
+            }
+            if (event.key === " " || event.key === "Enter") {
+              event.preventDefault();
+              setChoice(containerId, button.dataset.value || "", { focusSelected: true });
+              setTextError(errorBox, "");
+            }
+          });
+        });
+      }
+
+      function renderStep() {
+        steps.forEach((step, index) => {
+          const active = state.step === index + 1;
+          const node = document.getElementById(step.id);
+          node.classList.toggle("active", active);
+          node.setAttribute("aria-hidden", active ? "false" : "true");
+        });
+
+        stepLabel.textContent = `Step ${state.step} of ${steps.length}`;
+        stepShort.textContent = steps[state.step - 1].short;
+        progressFill.style.width = `${(state.step / steps.length) * 100}%`;
+        progressBar.setAttribute("aria-valuenow", String(state.step));
+        progressBar.setAttribute("aria-valuetext", `Step ${state.step} of ${steps.length}: ${steps[state.step - 1].short}`);
+        screenAnnouncer.textContent = `Now on step ${state.step} of ${steps.length}: ${steps[state.step - 1].short}.`;
+      }
+
+      function next() {
+        if (state.step < steps.length) {
+          state.step += 1;
+          renderStep();
+        }
+      }
+
+      function back() {
+        if (state.step > 1) {
+          state.step -= 1;
+          renderStep();
+        }
+      }
+
+      function hydrateSummary() {
+        document.getElementById("summary-goal").textContent = state.goal || "Not selected";
+        document.getElementById("summary-level").textContent = state.level || "Not selected";
+        document.getElementById("summary-schedule").textContent = `${state.days || "-"} • ${state.time || "-"}`;
+        document.getElementById("summary-reminders").textContent = state.notifications
+          ? "Enabled"
+          : "Disabled";
+      }
+
+      function hydrateHomeDashboard() {
+        const userName = prettifyName(state.email).replace(/^Hi\s+/i, "");
+        homeGreeting.textContent = userName ? `${userName}, let us train` : "Let us train";
+        homeStreak.textContent = "Streak: 1 day";
+        homeGoalCopy.textContent = `Goal mode: ${state.goal || "Stay active"} | Level: ${state.level || "Beginner"}.`;
+        homeProgressCopy.textContent = "Day 1 of 30. Finish today session to lock in your streak.";
+        homeWeeklyTarget.textContent = state.days || "4 workouts";
+        homeTimeTarget.textContent = state.time || "Flexible";
+        homeReminderTarget.textContent = state.notifications ? "On" : "Off";
+      }
+
+      document.getElementById("next-email").addEventListener("click", () => {
+        const value = emailInput.value.trim();
+        if (!value) {
+          setError(emailInput, emailError, "Email is required.");
+          return;
+        }
+        if (!emailIsValid(value)) {
+          setError(emailInput, emailError, "Enter a valid email address.");
+          return;
+        }
+
+        state.email = value;
+        setError(emailInput, emailError, "");
+        greeting.textContent = prettifyName(value);
+        next();
+        passwordInput.focus();
+      });
+
+      document.getElementById("back-password").addEventListener("click", () => {
+        setError(passwordInput, passwordError, "");
+        back();
+      });
+
+      document.getElementById("next-password").addEventListener("click", (event) => {
+        const button = event.currentTarget;
+        const value = passwordInput.value;
+        if (!value) {
+          setError(passwordInput, passwordError, "Password is required.");
+          return;
+        }
+
+        state.password = value;
+        setError(passwordInput, passwordError, "");
+        button.disabled = true;
+        button.setAttribute("aria-busy", "true");
+        button.innerHTML = '<span class="spinner"></span>Signing in...';
+
+        window.setTimeout(() => {
+          button.disabled = false;
+          button.setAttribute("aria-busy", "false");
+          button.textContent = "Sign in";
+          next();
+        }, 1000);
+      });
+
+      initChoiceGroup("goal-choices", goalError);
+      initChoiceGroup("level-choices", levelError);
+
+      document.getElementById("back-goal").addEventListener("click", back);
+      document.getElementById("back-level").addEventListener("click", back);
+      document.getElementById("back-schedule").addEventListener("click", back);
+      document.getElementById("back-health").addEventListener("click", back);
+      document.getElementById("back-summary").addEventListener("click", back);
+
+      document.getElementById("next-goal").addEventListener("click", () => {
+        if (!state.goal) {
+          setTextError(goalError, "Please choose your main goal.");
+          return;
+        }
+        next();
+      });
+
+      document.getElementById("next-level").addEventListener("click", () => {
+        if (!state.level) {
+          setTextError(levelError, "Please choose your current activity level.");
+          return;
+        }
+        next();
+      });
+
+      document.getElementById("next-schedule").addEventListener("click", () => {
+        const days = daysInput.value;
+        const time = timeInput.value;
+        if (!days || !time) {
+          setTextError(scheduleError, "Select workouts per week and preferred workout time.");
+          return;
+        }
+
+        state.days = days;
+        state.time = time;
+        setTextError(scheduleError, "");
+        next();
+      });
+
+      document.getElementById("next-health").addEventListener("click", () => {
+        state.limitations = limitationsInput.value.trim();
+        state.notifications = notificationsInput.checked;
+        hydrateSummary();
+        next();
+      });
+
+      document.getElementById("finish").addEventListener("click", () => {
+        const finishButton = document.getElementById("finish");
+        finishButton.disabled = true;
+        finishButton.innerHTML = '<span class="spinner"></span>Starting...';
+
+        window.setTimeout(() => {
+          finishButton.disabled = false;
+          finishButton.textContent = "Start day 1";
+          hydrateHomeDashboard();
+          onboardingCard.classList.add("hidden");
+          homeScreen.hidden = false;
+          homeScreen.classList.add("active");
+          screenAnnouncer.textContent = "Setup complete. Home dashboard loaded for day one.";
+        }, 900);
+      });
+
+      renderStep();
+    </script>
+  </body>
+</html>

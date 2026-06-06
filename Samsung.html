@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samsung — Anjali Goel</title>
+  <link rel="stylesheet" href="Samsung.css" />
+</head>
+<body>
+
+  <!-- Fixed nav (blend-mode difference so it reads on white) -->
+  <header class="sg-nav">
+    <a class="sg-nav-back" href="index.html#work">← Work</a>
+    <span class="sg-nav-title">Samsung</span>
+  </header>
+
+  <!-- Custom cursor -->
+  <div class="sg-cursor" id="sgCursor" aria-hidden="true">
+    <div class="sg-cursor-dot" id="sgCursorDot"></div>
+  </div>
+
+  <!--
+    Scroll track: height is set by JS to equal the sticky inner's scrollWidth.
+    As the user scrolls down, the sticky inner translates left by -scrollY,
+    converting vertical scroll into horizontal panning — exactly like Neo Tokyo.
+  -->
+  <div class="sg-track" id="sgTrack">
+
+    <!-- Sticky inner: position sticky, top 0, width min-content, height 100svh -->
+    <div class="sg-sticky" id="sgSticky">
+
+      <!-- Flat flex row — all panels side by side -->
+      <div class="sg-row" id="sgRow">
+
+        <!-- Panel 1: Project info (mirrors Neo Tokyo left title panel) -->
+        <div class="sg-panel sg-panel-info">
+          <div class="sg-info-top">
+            <p class="sg-eyebrow">UX Research &amp; Design</p>
+            <h1 class="sg-heading">Samsung</h1>
+          </div>
+          <div class="sg-info-bottom">
+            <p class="sg-desc">A design immersion at Samsung R&amp;D — exploring user research, team rituals, and the moments in between.</p>
+            <dl class="sg-meta">
+              <div><dt>Role</dt><dd>UX Designer</dd></div>
+              <div><dt>Year</dt><dd>2024</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Panels 2–11: one per image, full viewport height, auto width -->
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW1.png" alt="" loading="eager" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW2.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW3.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW4.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW5.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW6.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW7.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW8.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW9.png" alt="" loading="lazy" /></figure>
+        </div>
+        <div class="sg-panel sg-panel-img">
+          <figure><img src="assets/sw/SW10.png" alt="" loading="lazy" /></figure>
+        </div>
+
+        <!-- End panel: Next / back -->
+        <div class="sg-panel sg-panel-end">
+          <div class="sg-end-inner">
+            <p class="sg-eyebrow">Back to</p>
+            <h2 class="sg-end-heading"><a href="index.html#work">Work</a></h2>
+          </div>
+        </div>
+
+      </div><!-- /sg-row -->
+    </div><!-- /sg-sticky -->
+  </div><!-- /sg-track -->
+
+  <script src="Samsung.js"></script>
+</body>
+</html>
